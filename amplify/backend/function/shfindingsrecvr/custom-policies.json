@@ -1,0 +1,26 @@
+[
+  {
+    "Action": [
+      'sts:AssumeRole'
+    ],
+    "Resource": [
+      'arn:aws:iam::*:role/AWSControlTowerExecution'
+    ],
+    "Condition": {
+      "StringEquals": {
+        'aws:PrincipalOrgId': 'o-a4tlobvmc0'
+      }
+    }
+  },
+  {
+    "Action": [
+      'iam:CreateServiceLinkedRole'
+      'ec2:describeRegions'
+      'securityhub:GetEnabledStandards'
+      'securityhub:GetFindings'
+      'securityhub:ListInvitations'
+      'securityhub:ListMembers'
+    ],
+    "Resource": [ "*" ]
+  }
+]

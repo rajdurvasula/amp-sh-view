@@ -1,0 +1,18 @@
+<div class="container" style="margin-top: 70px;">
+    <table class="table table-striped" data-single-select="true" data-click-to-select="true">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Compliance</th>
+                <th scope="col">Title</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="findings">
+            <tr *ngFor="let finding of findings">
+		    <td><a routerLink="/detail/{{finding.id.identifier}}">{{finding.id.identifier}}</a></td>
+                <td>{{finding.compliance}}</td>
+                <td>{{finding.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/shfindings": {
+      "name": "/shfindings",
+      "lambdaFunction": "shfindingsrecvr",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
